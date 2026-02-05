@@ -259,7 +259,7 @@ export default function TweetForm() {
             )}
           </ProfileSection>
           <NavLink>@{user?.displayName || "Username"}</NavLink>
-          <NavLink as="a" href="/" style={{ textDecoration: "none" }}>
+          <NavLink as={Link} to="/" style={{ textDecoration: "none" }}>
             Home
           </NavLink>
           <NavLink as={Link} to="/profile" style={{ textDecoration: "none" }}>
