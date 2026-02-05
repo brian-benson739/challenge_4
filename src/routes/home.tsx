@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { auth, db, storage } from "../firebase";
-import {  useNavigate } from "react-router-dom";
+import {  Link, useNavigate } from "react-router-dom";
 import { addDoc, collection, updateDoc } from "firebase/firestore";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import Timeline from "../components/timeline";
@@ -262,7 +262,7 @@ export default function TweetForm() {
           <NavLink as="a" href="/" style={{ textDecoration: "none" }}>
             Home
           </NavLink>
-          <NavLink as="a" href="/profile" style={{ textDecoration: "none" }}>
+          <NavLink as={Link} to="/profile" style={{ textDecoration: "none" }}>
             Profile
           </NavLink>
         </Sidebar>
