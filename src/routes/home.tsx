@@ -242,7 +242,7 @@ export default function TweetForm() {
           <Header>
             <span>Twitter 𝕏</span>
           </Header>
-          <ProfileSection as="a" href="/profile">
+          <ProfileSection as={Link} to="/profile">
             {user?.photoURL ? (
               <AvatarImg src={user.photoURL} alt="Profile" />
             ) : (
