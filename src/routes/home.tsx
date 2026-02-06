@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { auth, db, storage } from "../firebase";
-import {  Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { addDoc, collection, updateDoc } from "firebase/firestore";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import Timeline from "../components/timeline";
@@ -266,15 +266,15 @@ export default function TweetForm() {
             Profile
           </NavLink>
         </Sidebar>
-        <MainContentArea> 
-          <Header> 
+        <MainContentArea>
+          <Header>
             <h1>Welcome, {user?.displayName || "To 𝕏"}</h1>
-            <HeaderLinks onClick={onLogOut}> 
-              <h1>Logout</h1> 
-            </HeaderLinks> 
-          </Header> 
- 
-          <Form onSubmit={onSubmit}> 
+            <HeaderLinks onClick={onLogOut}>
+              <h1>Logout</h1>
+            </HeaderLinks>
+          </Header>
+
+          <Form onSubmit={onSubmit}>
             <FormArea>
               <TextArea
                 onChange={onChange}
